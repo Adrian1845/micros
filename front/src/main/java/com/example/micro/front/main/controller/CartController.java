@@ -36,6 +36,6 @@ public class CartController {
     @DeleteMapping("/{id}")
     public String removeProduct(@PathVariable String id) {
         restTemplate.delete(serviceBackUrl + "/" + id);
-        return "Product removed from cart via Service A!";
+        return "Product removed from cart!";
     }
 }
