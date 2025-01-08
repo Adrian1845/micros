@@ -12,8 +12,8 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@RequestMapping("/cart")
-public class CartController {
+@RequestMapping("/test")
+public class TestController {
 
     @Autowired
     private RestTemplate restTemplate;
@@ -30,7 +30,7 @@ public class CartController {
     @PostMapping
     public String addProduct(@RequestBody Product product) {
         restTemplate.postForEntity(serviceBackUrl, product, String.class);
-        return ("Product: " + product.getName() + " was added successfully");
+        return "Product added to cart via Service A!";
     }
 
     @DeleteMapping("/{id}")
