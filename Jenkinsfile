@@ -1,3 +1,12 @@
+node {
+  stage('Check JAVA_HOME') {
+    bat 'echo %JAVA_HOME%'
+  }
+
+  stage('SCM') {
+    checkout scm
+  }
+
   stage('SonarQube Analysis - Back') {
     def mvn = tool 'sonar';
     withSonarQubeEnv() {
@@ -16,3 +25,4 @@
     }
   }
 }
+
