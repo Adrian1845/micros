@@ -11,7 +11,7 @@ node {
     def mvn = tool 'sonar';
     withSonarQubeEnv() {
       dir('back') {
-        bat "\"${mvn}\\bin\\mvn\" clean verify sonar:sonar -Dsonar.projectKey=micros-back -Dsonar.projectName=\"micros-back\" -Dsonar.token=%SONAR_TOKEN%"
+        bat "\"${mvn}\\bin\\mvn\" clean verify sonar:sonar -Dsonar.projectKey=micros-back -Dsonar.projectName=\"micros-back\" -Dsonar.token=%SONAR_TOKEN_BACK%"
       }
     }
   }
@@ -20,7 +20,7 @@ node {
     def mvn = tool 'sonar';
     withSonarQubeEnv() {
       dir('front') {
-        bat "\"${mvn}\\bin\\mvn\" clean verify sonar:sonar -Dsonar.projectKey=micros-front -Dsonar.projectName=\"micros-front\" -Dsonar.token=%SONAR_TOKEN%"
+        bat "\"${mvn}\\bin\\mvn\" clean verify sonar:sonar -Dsonar.projectKey=micros-front -Dsonar.projectName=\"micros-front\" -Dsonar.token=%SONAR_TOKEN_FRONT%"
       }
     }
   }
