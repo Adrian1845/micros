@@ -1,4 +1,7 @@
 node {
+  stage('Check JAVA_HOME') {
+    bat 'echo $JAVA_HOME'
+  }
   stage('SCM') {
     checkout scm
   }
