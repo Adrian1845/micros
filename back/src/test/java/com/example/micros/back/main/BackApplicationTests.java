@@ -1,4 +1,4 @@
-package com.example.micros.back.back;
+package com.example.micros.back.main;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
